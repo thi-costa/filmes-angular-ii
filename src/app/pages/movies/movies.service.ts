@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {
+  Observable,
+  tap,
+  catchError,
+  throwError
+} from 'rxjs';
 import { MovieType } from 'src/app/types/movie';
 import { MovieParamsType } from 'src/app/types/movieParams';
 
@@ -18,5 +23,10 @@ export class MoviesService {
   getMoviesById(movieId: string): Observable<MovieType> {
     const url = `${this._url}/movies/${movieId}`;
     return this._http.get<MovieType>(url);
+  }
+  deleteMoviesById(movieId: string): Observable<void> {
+    const url = `${this._url}/movies/${movieId}`;
+    console.log(`url para deletar: ${url}`);
+    return this._http.delete<void>(url);
   }
 }
