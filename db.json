@@ -1,0 +1,44 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "O jogo da imitação",
+      "synopsis": "Durante a segunda guerra mundial, um inglês gênio da matemática tenta decifrar o código alemão Enigma com a ajuda de seus colegas.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg",
+      "trailerUrl": "https://www.youtube.com/watch?v=YIkKbMcJL_4",
+      "minutes": 114,
+      "rating": 4.8,
+      "favorite": false
+    },
+    {
+      "id": "2",
+      "name": "O jogo da imitação",
+      "synopsis": "Durante a segunda guerra mundial, um inglês gênio da matemática tenta decifrar o código alemão Enigma com a ajuda de seus colegas.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg",
+      "trailerUrl": "https://www.youtube.com/watch?v=YIkKbMcJL_4",
+      "minutes": 114,
+      "rating": 4.8,
+      "favorite": false
+    },
+    {
+      "id": "3",
+      "name": "O jogo da imitação",
+      "synopsis": "Durante a segunda guerra mundial, um inglês gênio da matemática tenta decifrar o código alemão Enigma com a ajuda de seus colegas.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg",
+      "trailerUrl": "https://www.youtube.com/watch?v=YIkKbMcJL_4",
+      "minutes": 114,
+      "rating": 4.8,
+      "favorite": false
+    },
+    {
+      "id": "4",
+      "name": "O menu",
+      "synopsis": "Durante a segunda guerra mundial, um inglês gênio da matemática tenta decifrar o código alemão Enigma com a ajuda de seus colegas.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg",
+      "trailerUrl": "https://www.youtube.com/watch?v=YIkKbMcJL_4",
+      "minutes": 114,
+      "rating": 4.8,
+      "favorite": false
+    }
+  ]
+}

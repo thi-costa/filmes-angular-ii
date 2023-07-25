@@ -1,0 +1,6 @@
+<div class="filter">
+  <form [formGroup]="form" (ngSubmit)="getBy($event)">
+    <input type="text" placeholder="Informe o nome do filme" formControlName="name_like" />
+    <button type="submit">BUSCAR</button>
+  </form>
+</div>

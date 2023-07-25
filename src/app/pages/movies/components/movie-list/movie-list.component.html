@@ -1,0 +1,8 @@
+<app-movie-filter (onSearch)="getMoviesBy($event)"></app-movie-filter>
+<div class="movie-list">
+  <div class="movie-list__container">
+    <div class="movie-list__item" *ngFor="let movie of movies">
+      <app-movie-item [movie]="movie"></app-movie-item>
+    </div>
+  </div>
+</div>
