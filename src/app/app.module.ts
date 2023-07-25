@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/components/menu/menu.component';
 import { HeaderModule } from './components/header/header.module';
-import { MovieListModule } from './pages/movie-list/movie-list.module';
+import { MoviesModule } from './pages/movies/movies.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HeaderModule, MovieListModule],
+  imports: [BrowserModule, AppRoutingModule, HeaderModule, MoviesModule],
   providers: [],
   bootstrap: [AppComponent],
 })
