@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './pages/shared/components/page-not-found/
 
 const routes: Routes = [
   {path: '', component: MoviesComponent},
+  {path: 'movies', loadChildren: () => import('./pages/movies/movies.module').then((m) => m.MoviesModule)},
   {path: '**', component: PageNotFoundComponent}
 ];
 
