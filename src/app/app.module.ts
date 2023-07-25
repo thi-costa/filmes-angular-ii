@@ -10,7 +10,12 @@ import { MoviesModule } from './pages/movies/movies.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HeaderModule, MoviesModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HeaderModule,
+    MoviesModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

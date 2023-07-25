@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { MovieType } from 'src/app/types/movie';
 
 @Component({
@@ -10,19 +11,9 @@ export class MovieItemComponent {
   @Input() movie!: MovieType;
   trailerUrl: string = '';
 
-  openVideoModal() {
-    const videoModal = document.getElementById('videoModal');
-    if (videoModal) {
-      videoModal.classList.add('show');
-      videoModal.style.display = 'block';
-    }
-  }
+  constructor(private _router: Router){}
 
-  closeVideoModal() {
-    const videoModal = document.getElementById('videoModal');
-    if (videoModal) {
-      videoModal.classList.remove('show');
-      videoModal.style.display = 'none';
-    }
+  openMoviesDetail(movieId: string){
+    this._router.navigate([`/movies/${movieId}`]);
   }
 }

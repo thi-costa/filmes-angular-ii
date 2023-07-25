@@ -1,0 +1,25 @@
+<div *ngIf="movie" class="movie-details">
+  <img class="movie-details__background-image" [src]="movie.imageUrl" />
+  <h2 class="movie-details__movie-title">{{ movie.name }}</h2>
+  <p class="movie-details__movie-description">{{ movie.synopsis }}</p>
+  <div class="movie-details__movie-meta">
+    <p class="movie-details__movie-meta__duration">{{ movie.minutes }} minutos</p>
+    <div class="movie-details__movie-meta__rating">
+      <span class="movie-details__movie-meta__rating__rating-value">{{ movie.rating }}</span>
+      <div class="movie-details__movie-meta__rating__stars">
+        <span class="movie-details__movie-meta__rating__stars__star" [ngClass]="{'fas': movie.rating >= 1, 'far': movie.rating < 1}"></span>
+        <span class="movie-details__movie-meta__rating__stars__star" [ngClass]="{'fas': movie.rating >= 2, 'far': movie.rating < 2}"></span>
+        <span class="movie-details__movie-meta__rating__stars__star" [ngClass]="{'fas': movie.rating >= 3, 'far': movie.rating < 3}"></span>
+        <span class="movie-details__movie-meta__rating__stars__star" [ngClass]="{'fas': movie.rating >= 4, 'far': movie.rating < 4}"></span>
+        <span class="movie-details__movie-meta__rating__stars__star" [ngClass]="{'fas': movie.rating >= 5, 'far': movie.rating < 5}"></span>
+      </div>
+    </div>
+    <div class="movie-details__movie-meta__favorite-icon">
+      <i class="movie-details__movie-meta__fas movie-details__movie-meta__fa-heart" [ngClass]="{'active': movie.favorite}"></i>
+    </div>
+  </div>
+  <div class="movie-details__youtube-video">
+    <!-- Check if YouTube API is accessible and display the video or fallback message -->
+    <youtube-player [videoId]="getVideoId(movie.trailerUrl)" [height]="500" [width]="700" suggestedQuality="hd720"></youtube-player>
+  </div>
+</div>

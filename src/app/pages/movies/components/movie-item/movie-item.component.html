@@ -1,5 +1,5 @@
 <div class="movie-item">
-  <img class="movie-item__image" [src]="movie.imageUrl"/>
+  <img class="movie-item__image" (click)="openMoviesDetail(movie.id)" [src]="movie.imageUrl"/>
   
   <div class="movie-item__info">
     <div class="movie-item__info__name">{{ movie.name | uppercase }}</div>
