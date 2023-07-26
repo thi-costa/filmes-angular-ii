@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
       .pipe(take(1))
       .subscribe({
         next: (value) => {
+          console.log(value.auth);
           localStorage.setItem('auth', String(value.auth));
           this._router.navigate(['/movies']);
         },

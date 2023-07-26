@@ -11,12 +11,9 @@ export class LoginService {
   constructor() { }
 
   login(login: string, password: string): Observable<AuthType>{
-    const authObject: AuthType = {
-      auth: false
-    }
     if(login === "movies@email.com" && password === "123456"){
-      authObject.auth = true;
+      return of({auth: true});
     }
-    return of(authObject); 
+    return of({ auth: false }); 
   }
 }
