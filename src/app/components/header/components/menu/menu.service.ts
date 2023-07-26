@@ -8,7 +8,7 @@ export class MenuService {
 
   constructor(private _router: Router) { }
 
-  redirectToRoot(){
-    this._router.navigate(['/']);
+  redirectNavPath(path: string){
+    this._router.navigate([path]);
   }
 }

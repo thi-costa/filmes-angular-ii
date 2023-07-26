@@ -1,7 +1,5 @@
 <section class="menu">
   <div class="menu__list">
-    <button class="menu__list__item" (click)="redirectToRoot()" >Home</button>
-    <button class="menu__list__item">Favoritos</button>
-    <button class="menu__list__item">Quem somos?</button>
+    <button *ngFor="let navLink of navLinks" (click)="redirectNavPath(navLink.path)" class="menu__list__item">{{navLink.label}}</button>
   </div>
 </section>

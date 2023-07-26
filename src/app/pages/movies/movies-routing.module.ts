@@ -7,8 +7,15 @@ import { DeleteMovieComponent } from './components/delete-movie/delete-movie.com
 
 const routes: Routes = [
   { path: '', component: MoviesComponent },
-  { path: 'delete/:id', component: DeleteMovieComponent},
-  { path: ':id', component: MovieDetailComponent},
+  {
+    path: 'favorite',
+    component: MoviesComponent,
+    data: {
+      favorite: true,
+    },
+  },
+  { path: 'delete/:id', component: DeleteMovieComponent },
+  { path: ':id', component: MovieDetailComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -18,6 +18,7 @@ export class MoviesService {
   constructor(private _http: HttpClient) {}
 
   public getMovies(params?: MovieParamsType): Observable<MovieType[]> {
+    console.log('url: ', `${this._url}/movies`, { params });
     return this._http.get<MovieType[]>(`${this._url}/movies`, { params });
   }
   getMoviesById(movieId: string): Observable<MovieType> {
