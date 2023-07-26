@@ -1,0 +1,61 @@
+.edit-movie-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  &__form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    &__save-button,
+    &__cancel-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &__save-button {
+      background-color: #007bff;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    &__cancel-button {
+      background-color: #ccc;
+      color: #000;
+    }
+  }
+}

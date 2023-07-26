@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavLinksTypes } from './types/navLinks';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'filmes-angular-ii';
+  navLinks: NavLinksTypes[] = [
+    {label: "Home", path: "/"},
+    {label: "Favoritos", path: "/movies/favorite"},
+    {label: "Sobre nós", path: "/about"}
+  ]
 }

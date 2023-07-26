@@ -23,7 +23,7 @@ export class MovieDetailComponent implements OnInit {
     this._route.params.subscribe((params) => {
       const movieId = params['id'];
       // Fetch the movie details by ID using the FilmesService
-      this._service.getMoviesById(movieId).subscribe(
+      this._service.getMovieById(movieId).subscribe(
         (movie) => {
           this.movie = movie;
           console.log(`URL before sanitizer: "${this.movie.trailerUrl}"`);

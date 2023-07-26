@@ -5,4 +5,12 @@
     <div class="movie-item__info__name">{{ movie.name | uppercase }}</div>
     <div class="movie-item__info__price"> {{ movie.minutes }} minutos </div>
   </div>
+  <div class="movie-item__action-icons">
+    <button class="movie-item__action-icons__edit" mat-icon-button (click)="editMovie(movie.id)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button class="movie-item__action-icons__delete" mat-icon-button color="warn"  (click)="deleteMovie(movie.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
 </div>

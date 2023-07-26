@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuService } from './menu.service';
+import { NavLinksTypes } from 'src/app/types/navLinks';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(private _service: MenuService){}
+  @Input() navLinks: NavLinksTypes[];
 
-  redirectToRoot(){
-    this._service.redirectToRoot();
-  }
+  constructor(private _service: MenuService){};
 
+  public redirectNavPath(path: string){
+    this._service.redirectNavPath(path);
+  };
 }
