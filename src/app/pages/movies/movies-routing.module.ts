@@ -5,6 +5,7 @@ import { MoviesComponent } from './movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { DeleteMovieComponent } from './components/delete-movie/delete-movie.component';
 import { EditMovieComponent } from './components/edit-movie/edit-movie.component';
+import { AuthGuard } from '../shared/auth/auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: MoviesComponent },
@@ -15,8 +16,12 @@ const routes: Routes = [
       favorite: true,
     },
   },
-  { path: 'edit/:id', component: EditMovieComponent },
-  { path: 'delete/:id', component: DeleteMovieComponent },
+  { path: 'edit/:id', component: EditMovieComponent, canActivate: [AuthGuard] },
+  {
+    path: 'delete/:id',
+    component: DeleteMovieComponent,
+    canActivate: [AuthGuard],
+  },
   { path: ':id', component: MovieDetailComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

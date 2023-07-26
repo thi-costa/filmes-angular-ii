@@ -11,6 +11,7 @@ export class AppComponent {
   navLinks: NavLinksTypes[] = [
     {label: "Home", path: "/"},
     {label: "Favoritos", path: "/movies/favorite"},
-    {label: "Sobre nós", path: "/about"}
+    {label: "Sobre nós", path: "/about"},
+    {label: "Login", path: "/login"}
   ]
 }
