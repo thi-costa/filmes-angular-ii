@@ -1,0 +1,38 @@
+<div class="login-container">
+  <h2>Editar Filme</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="login-container__form-group">
+      <label for="login">E-mail</label>
+      <input type="text" id="login" name="login" formControlName="login" required>
+      <mat-error *ngIf="loginForm.get('login').hasError('required')">
+        Campo obrigatório
+      </mat-error>
+      <mat-error *ngIf="loginForm.get('login').hasError('email')">
+        E-mail inválido
+      </mat-error>
+    </div>
+    <div class="login-container__form-group">
+      <label for="password">Password</label>
+      <input id="password" [type]="showPassword ? 'text' : 'password'" name="password" formControlName="password" required />
+      <div class="login-container__form-group__password-info">
+        <mat-error *ngIf="loginForm.get('password').hasError('required')">
+          Campo obrigatório
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('password').hasError('minlength')">
+          Senha curta
+        </mat-error>
+        <div class="nested-container">
+          <mat-icon matSuffix (click)="showPassword = !showPassword" class="c-pointer">
+            {{ showPassword ? "visibility_off" : "visibility" }}
+          </mat-icon>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="login-container__buttons">
+      <button type="submit" class="login-container__buttons__save-button" (click)="login()">Acessar</button>
+    </div>
+  </form>
+</div>
+
