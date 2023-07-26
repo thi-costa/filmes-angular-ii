@@ -16,4 +16,10 @@ export class MovieItemComponent {
   openMoviesDetail(movieId: string){
     this._router.navigate([`/movies/${movieId}`]);
   }
+  editMovie(movieId: string){
+    this._router.navigate([`/movies/edit/${movieId}`]);
+  }
+  deleteMovie(movieId: string){
+    this._router.navigate([`/movies/delete/${movieId}`]);
+  }
 }

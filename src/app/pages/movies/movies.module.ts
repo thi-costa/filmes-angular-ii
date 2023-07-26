@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatIconModule } from '@angular/material/icon';
 import { FilterComponent } from './components/filter/filter.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { MoviesRoutingModule } from './movies-routing.module';
@@ -34,6 +34,7 @@ import { NewMovieComponent } from './components/new-movie/new-movie.component';
     ReactiveFormsModule,
     YouTubePlayerModule,
     MatIconModule,
+    FormsModule
   ],
   // exports: [MoviesComponent],
 })

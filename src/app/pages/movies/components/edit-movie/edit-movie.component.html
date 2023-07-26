@@ -1,1 +1,39 @@
-<p>edit-movie works!</p>
+<div class="edit-movie-container" *ngIf="movie"[hidden]="!movie">
+  <h2>Editar Filme</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <label for="id" hidden>id</label>
+    <input type="text" id="id" formControlName="id" name="id" required hidden>
+    <div class="edit-movie-container__form-group">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" formControlName="name" required>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="synopsis">Sinopse</label>
+      <textarea id="synopsis" name="synopsis" formControlName="synopsis" required></textarea>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="imageUrl">URL da Imagem</label>
+      <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" required>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="trailerUrl">URL do Trailer (YouTube)</label>
+      <input type="text" id="trailerUrl" name="trailerUrl" formControlName="trailerUrl" required>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="minutes">Duração (minutos)</label>
+      <input min="0" type="number" id="minutes" name="minutes" formControlName="minutes" required>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="rating">Classificação (de 0 a 5)</label>
+      <input min="0" max="5" step="0.1" type="number" id="rating" name="rating" formControlName="rating" required>
+    </div>
+    <div class="edit-movie-container__form-group">
+      <label for="favorite">Favoritar</label>
+      <input type="checkbox" id="favorite" name="favorite" formControlName="favorite" >
+    </div>
+    <div class="edit-movie-container__buttons">
+      <button type="submit" class="edit-movie-container__buttons__save-button" (click)="onSubmit()" [disabled]="!movie">Salvar</button>
+      <button type="button" class="edit-movie-container__buttons__cancel-button" (click)="cancelEdit()">Cancelar</button>
+    </div>
+  </form>
+</div>

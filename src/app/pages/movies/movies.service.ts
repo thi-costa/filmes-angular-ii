@@ -21,9 +21,14 @@ export class MoviesService {
     console.log('url: ', `${this._url}/movies`, { params });
     return this._http.get<MovieType[]>(`${this._url}/movies`, { params });
   }
-  getMoviesById(movieId: string): Observable<MovieType> {
+  getMovieById(movieId: string): Observable<MovieType> {
     const url = `${this._url}/movies/${movieId}`;
     return this._http.get<MovieType>(url);
+  }
+  updateMovie(movie: MovieType){
+    const url = `${this._url}/movies/${movie.id}`;
+    return this._http.put<MovieType>(url, movie);
+
   }
   deleteMoviesById(movieId: string): Observable<void> {
     const url = `${this._url}/movies/${movieId}`;

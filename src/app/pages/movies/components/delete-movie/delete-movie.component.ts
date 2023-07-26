@@ -29,7 +29,7 @@ export class DeleteMovieComponent implements OnInit, OnDestroy {
     if (this._route.routeConfig.path.includes('delete')) {
       this.movieId = this._route.snapshot.params['id'];
       console.log(`Filme de id '${this.movieId}'`)
-      this._service.getMoviesById(this.movieId);
+      this._service.getMovieById(this.movieId);
     }
   }
   deleteMovie(){
